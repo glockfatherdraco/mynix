@@ -5,7 +5,7 @@
     enable = true;
 
     signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBoPlEmDxfm1Q3Rx4PcZVPVcpqFpLaT45kRBlowfr3aN 161503241+glockfatherdraco@users.noreply.github.com";
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIi+w92Hg1kmwOKf3pAnmQ2ZmgyUIucyK8P5dsviDE8x 161503241+glockfatherdraco@users.noreply.github.com";
       signByDefault = true;
       format = "ssh";
     };
