@@ -75,7 +75,7 @@ sudo rm -rf /etc/nixos
 ```
 
 ```
-git clone https://github.com/glockfatherdraco/nixos-config.git /etc/nixos
+git clone https://github.com/glockfatherdraco/mynix.git /etc/nixos
 ```
 
 ```
