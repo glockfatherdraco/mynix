@@ -1,0 +1,127 @@
+{
+  "autosave": "on_focus_change",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14.0,
+  "buffer_line_height": "comfortable",
+  "cli_default_open_behavior": "new_window",
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    "source.organizeImports.biome": true
+  },
+  "collaboration_panel": {
+    "button": true
+  },
+  "disable_ai": true,
+  "format_on_save": "on",
+  "git": {
+    "blame": {
+      "show_avatar": true
+    },
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
+  "git_panel": {
+    "collapse_untracked_diff": false,
+    "dock": "left",
+    "status_style": "icon",
+    "tree_view": true
+  },
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "languages": {
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JavaScript React": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "Nix": {
+      "language_servers": [
+        "nixd"
+      ]
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "TypeScript React": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    }
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    },
+    "clangd": {
+      "binary": {
+        "arguments": [
+          "--query-driver=**",
+          "--background-index",
+          "--clang-tidy"
+        ]
+      }
+    },
+    "nixd": {
+      "binary": {
+        "path": "nixd"
+      }
+    }
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "folder_indicator": "icon",
+    "dock": "left",
+    "entry_spacing": "standard",
+    "file_icons": true,
+    "hide_gitignore": false,
+    "indent_guides": {
+      "show": "always"
+    }
+  },
+  "redact_private_values": false,
+  "restore_on_startup": "last_session",
+  "scrollbar": {
+    "git_diff": true
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "telemetry": {
+    "anthropic_retention": false,
+    "diagnostics": false,
+    "metrics": false
+  },
+  "text_rendering_mode": "platform_default",
+  "theme": "Ayu Dark",
+  "title_bar": {
+    "show_sign_in": true
+  },
+  "ui_font_size": 14,
+  "use_system_path_prompts": true
+}
