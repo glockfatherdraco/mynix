@@ -13,6 +13,7 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#${host}";
       clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise";
+      tclean = "sudo rm -rf .local/share/Trash/files/*";
       sn = "sudo nano";
       home = "cd /home/${username}/";
       edit = "cd /etc/nixos";
