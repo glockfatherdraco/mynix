@@ -1,4 +1,14 @@
-# My NixOS Configuration
+<div align="center">
+
+# My NixOS Config
+
+<br />
+
+[![Last Commit](https://img.shields.io/github/last-commit/glockfatherdraco/mynix?style=flat-square)](https://github.com/glockfatherdraco/mynix/commits/main)
+
+</div>
+
+<div align="center">
 
 A simple [NixOS](https://nixos.org/) configuration with [COSMIC](https://system76.com/cosmic) desktop and evil Home Manager
 
@@ -83,6 +93,7 @@ nix flake lock /etc/nixos
 ```
 
 ```
-sudo nixos-rebuild switch --flake /etc/nixos#nix
+sudo nixos-rebuild switch --flake /etc/nixos#hryttfd
 ```
+
 </details>
