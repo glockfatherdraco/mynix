@@ -8,8 +8,6 @@
 
 </div>
 
-<div align="center">
-
 A simple [NixOS](https://nixos.org/) configuration with [COSMIC](https://system76.com/cosmic) desktop and evil Home Manager
 
 > [!CAUTION]
