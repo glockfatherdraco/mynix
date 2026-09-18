@@ -27,8 +27,7 @@
     ];
   };
 
-  # Network workaround for declarative installs because Flatpak updates may
-  # start before the network is online.
+  # Network workaround
   systemd.services."flatpak-managed-install".unitConfig = {
     After = [ "network-online.target" ];
     Wants = [ "network-online.target" ];

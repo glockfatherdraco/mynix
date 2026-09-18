@@ -1,13 +1,9 @@
-{ lib, nixcord, username, ... }:
+{ lib, username, ... }:
 
 {
-  imports =
-    [
-      nixcord.homeModules.nixcord
-    ]
-    ++ lib.fileset.toList (
-      lib.fileset.fileFilter (file: file.hasExt "nix") ./modules
-    );
+  imports = lib.fileset.toList (
+    lib.fileset.fileFilter (file: file.hasExt "nix") ./modules
+  );
 
   home = {
     inherit username;

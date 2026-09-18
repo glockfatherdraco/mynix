@@ -1,13 +1,12 @@
 {
   programs.nixcord = {
-    discord.enable = false;
     enable = true;
+    discord.enable = false;
 
-    # vencoh
+    # Vencoh
     vesktop = {
       enable = true;
       settings = {
-        disableSmoothScroll = true;
         hardwareAcceleration = false;
         staticTitle = true;
         offloadAdmControls = true;

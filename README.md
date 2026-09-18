@@ -91,7 +91,7 @@ nix flake lock /etc/nixos
 ```
 
 ```
-sudo nixos-rebuild switch --flake /etc/nixos#hryttfd
+sudo nixos-rebuild switch --flake /etc/nixos#nix
 ```
 
 </details>

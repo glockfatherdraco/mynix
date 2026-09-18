@@ -10,7 +10,7 @@
     };
 
     nixcord = {
-      url = "github:FlameFlag/nixcord";
+      url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -18,44 +18,35 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      home-manager,
-      nixcord,
-      nix-flatpak,
-      ...
-    }:
+    inputs@{ nixpkgs, home-manager, nix-flatpak, ... }:
     let
+      system = "x86_64-linux";
       username = "gfd";
-      host = "hryttfd";
+      host = "nix";
+      shared = { inherit inputs host username; };
     in
     {
       nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
-        specialArgs = {
-          inherit host username nixcord;
-        };
+        specialArgs = shared;
 
         modules = [
+          { nixpkgs.hostPlatform = system; }
           ./entry.nix
           nix-flatpak.nixosModules.nix-flatpak
-
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "hm-bak";
-
-              extraSpecialArgs = {
-                inherit host username nixcord;
-              };
-
+              extraSpecialArgs = shared;
+              sharedModules = [ inputs.nixcord.homeModules.nixcord ];
               users.${username} = ./home/manager.nix;
             };
           }
         ];
       };
+
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
     };
 }

@@ -19,9 +19,8 @@
     };
 
     enable = true;
-
     scripts = with pkgs.mpvScripts; [
-      mpv-osc-tethys
+      mpv-osc-modern
       thumbfast
     ];
   };
