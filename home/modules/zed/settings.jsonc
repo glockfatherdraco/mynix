@@ -9,7 +9,7 @@
     "source.organizeImports.biome": true
   },
   "collaboration_panel": {
-    "button": true
+    "button": false
   },
   "disable_ai": true,
   "format_on_save": "on",
@@ -120,7 +120,7 @@
   "text_rendering_mode": "platform_default",
   "theme": "Ayu Dark",
   "title_bar": {
-    "show_sign_in": true
+    "show_sign_in": false
   },
   "ui_font_size": 14,
   "use_system_path_prompts": true
