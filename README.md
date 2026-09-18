@@ -83,11 +83,7 @@ sudo nixos-generate-config
 ```
 
 ```
-sudo rm -rf /etc/nixos/.git
-```
-
-```
-nix flake lock /etc/nixos
+sudo rm -rf /etc/nixos/.git /etc/nixos/configuration.nix
 ```
 
 ```
