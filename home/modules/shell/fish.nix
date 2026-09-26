@@ -19,7 +19,7 @@
 
       home = "cd /home/${username}/";
       edit = "cd /etc/nixos";
-      cleartrash = "rm -rf ~/.local/share/Trash/files/* ~/.local/share/Trash/info/*";
+      cleartrash = "gio trash --empty";
 
       ll = "ls -lah";
       la = "ls -A";

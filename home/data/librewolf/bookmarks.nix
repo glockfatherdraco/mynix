@@ -16,12 +16,17 @@
   }
   {
     "Title" = "";
-    "URL" = "https://x.com";
+    "URL" = "https://discord.com/app"; # "Root of all evil" ~glockfatherdraco
     "Placement" = "toolbar";
   }
   {
     "Title" = "";
-    "URL" = "https://discord.com/app"; # "Root of all evil" ~glockfatherdraco
+    "URL" = "https://reddit.com";
+    "Placement" = "toolbar";
+  }
+  {
+    "Title" = "";
+    "URL" = "https://x.com";
     "Placement" = "toolbar";
   }
   {

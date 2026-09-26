@@ -29,18 +29,16 @@ in
       inherit (cfg) nativeMessagingHosts;
 
       settings = import (data + "/prefs.nix");
-
       policies = lib.recursiveUpdate
+        (import (data + "/settings.nix"))
         {
           Bookmarks = import (data + "/bookmarks.nix");
           ExtensionSettings =
-            import (data + "/extensions.nix")
-            // cfg.extraExtensions;
+            (import (data + "/extensions.nix")) // cfg.extraExtensions;
           Cookies.Allow = [
             "https://discord.com"
           ];
-        }
-        (import (data + "/settings.nix"));
+        };
     };
   };
 }

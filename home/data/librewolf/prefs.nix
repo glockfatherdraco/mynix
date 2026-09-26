@@ -5,7 +5,7 @@
   "browser.migrate.bookmarks-file.enabled" = false;
   "browser.shell.checkDefaultBrowser" = false;
   "browser.toolbars.bookmarks.visibility" = "newtab";
-  "browser.translations.neverTranslateLanguages" = "fr";
+  "browser.translations.neverTranslateLanguages" = "en";
   "dom.text_fragments.create_text_fragment.enabled" = true;
   "extensions.install_origins.enabled" = true;
   "general.autoScroll" = true;

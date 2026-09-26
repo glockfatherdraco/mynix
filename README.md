@@ -43,14 +43,14 @@ A simple [NixOS](https://nixos.org/) configuration with [COSMIC](https://system7
 <details>
 <summary><b>Why do you use a firewall?</b></summary>
 
-> I play outdated P2P games with a quadrillion vulnerabilities and usually get things from torrents. When I'm not doing anything with the firewall, it just acts as an extra layer of security for me because I'm paranoid that my Huawei router is going to hack me and send all my data to the CCP
+> sudo opsec
 
 </details>
 
 <details>
 <summary><b>Why NixOS?</b></summary>
 
-> Because I simply love torturing myself instead of using any user friendly distro based on Ubuntu
+> sudo opsec
 
 </details>
 
