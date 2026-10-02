@@ -1,5 +1,4 @@
-# ~/.config/firejail/prismlauncher.profile
-# Firejail profile for Prism Launcher
+# Firejail profile for PrismLauncher
 
 include globals.local
 include prismlauncher.local
@@ -44,12 +43,13 @@ disable-mnt
 private-cache
 private-dev
 private-tmp
-private-bin bash,sh,java,java-config,javaw,keytool,minecraft-launcher,prismlauncher,xdg-open,zenity,kdialog
+private-bin bash,sh,java,java-config,javaw,keytool,minecraft-launcher,prismlauncher,xdg-open,zenity,kdialog,gamemoderun,gamemoded
 
 dbus-system none
 dbus-user filter
 dbus-user.talk org.freedesktop.portal.Desktop
 dbus-user.talk org.freedesktop.notifications
+dbus-user.talk com.feralinteractive.GameMode
 
 restrict-namespaces
 
