@@ -1,0 +1,115 @@
+{
+  "horizontal_scroll_margin": 6.0,
+  "vertical_scroll_margin": 6.0,
+  "cursor_blink": false,
+  "format_on_save": "off",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "cli_default_open_behavior": "new_window",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "disable_ai": true,
+  "autosave": "on_focus_change",
+  "code_actions_on_format": {
+    "source.organizeImports.biome": true,
+    "source.fixAll.biome": true
+  },
+  "scrollbar": {
+    "git_diff": true
+  },
+  "git_panel": {
+    "tree_view": true,
+    "collapse_untracked_diff": false,
+    "status_style": "icon",
+    "dock": "left"
+  },
+  "git": {
+    "blame": {
+      "show_avatar": true
+    },
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "Nix": {
+      "language_servers": [
+        "nixd"
+      ]
+    }
+  },
+  "lsp": {
+    "nixd": {
+      "binary": {
+        "path": "nixd"
+      }
+    },
+    "clangd": {
+      "binary": {
+        "arguments": [
+          "--query-driver=**",
+          "--background-index",
+          "--clang-tidy"
+        ]
+      }
+    }
+  },
+  "use_system_path_prompts": true,
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "text_rendering_mode": "platform_default",
+  "restore_on_startup": "last_session",
+  "redact_private_values": false,
+  "project_panel": {
+    "indent_guides": {
+      "show": "always"
+    },
+    "entry_spacing": "standard",
+    "hide_gitignore": false,
+    "dock": "left",
+    "file_icons": true,
+    "folder_indicator": "icon"
+  },
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 14,
+  "buffer_font_size": 14.0,
+  "theme": "Ayu Dark",
+  "auto_install_extensions": {
+    "nix": true,
+    "d2": true
+  },
+  "title_bar": {
+    "show_sign_in": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  }
+}
