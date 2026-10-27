@@ -21,6 +21,9 @@ in
       ./modules
       {
         nixpkgs.hostPlatform = system.arch;
+        nixpkgs.overlays = [
+          inputs.nix-gaming-edge.overlays.proton-cachyos
+        ];
 
         home-manager = {
           useGlobalPkgs = true;

@@ -19,11 +19,11 @@ in
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
+      extraCompatPackages = [ pkgs.proton-cachyos-x86_64-v3 ];
     };
 
     environment.systemPackages = with pkgs; [
       mangohud
-      protonplus
       prismlauncher
       r2modman
     ];

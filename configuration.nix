@@ -53,7 +53,9 @@
       adwaita-fonts
       nerd-fonts.jetbrains-mono
 
+      steamguard-cli
       yt-dlp
+
 
       onlyoffice-desktopeditors
       papers
