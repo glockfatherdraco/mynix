@@ -14,7 +14,7 @@ let
   ];
 
   # -- home-manager modules
-  hmModules = [
+  hmmods = [
     inputs.nixcord.homeModules.nixcord
     inputs.pear-desktop.homeManagerModules.default
   ];
@@ -36,7 +36,7 @@ in
           useUserPackages = true;
           backupFileExtension = "hm-bak";
           extraSpecialArgs = cfg;
-          sharedModules = hmModules;
+          sharedModules = hmmods;
         };
       }
     ] ++ flakemods;

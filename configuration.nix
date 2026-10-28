@@ -56,7 +56,7 @@
       steamguard-cli
       yt-dlp
 
-
+      audacity
       onlyoffice-desktopeditors
       papers
 

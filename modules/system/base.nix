@@ -111,7 +111,7 @@
       enable = true;
       settings.Resolve = {
         DNS = system.dns;
-        DNSOverTLS = "opportunistic";
+        DNSOverTLS = "true";
         DNSSEC = "allow-downgrade";
         Domains = [ "~." ];
         LLMNR = "false";
