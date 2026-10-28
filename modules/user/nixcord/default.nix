@@ -1,5 +1,5 @@
-# /etc/nixos/home/nixcord.nix
 { ... }:
+
 {
   programs.nixcord = {
     enable = true;
