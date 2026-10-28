@@ -9,7 +9,12 @@ in
     defaultEditor = true;
 
     # -- extensions
-    extensions = [ "nix" ];
+    extensions = [
+      "d2"
+      "nix"
+      "lua"
+      "toml"
+    ];
 
     # -- language servers
     extraPackages = with pkgs; [

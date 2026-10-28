@@ -12,6 +12,12 @@ let
     nix-flatpak.nixosModules.nix-flatpak
     nix-index-database.nixosModules.default
   ];
+
+  # -- home-manager modules
+  hmModules = [
+    inputs.nixcord.homeModules.nixcord
+    inputs.pear-desktop.homeManagerModules.default
+  ];
 in
 {
   nixosConfigurations.${system.hostname} = inputs.nixpkgs.lib.nixosSystem {
@@ -30,6 +36,7 @@ in
           useUserPackages = true;
           backupFileExtension = "hm-bak";
           extraSpecialArgs = cfg;
+          sharedModules = hmModules;
         };
       }
     ] ++ flakemods;

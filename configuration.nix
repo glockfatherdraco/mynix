@@ -59,7 +59,6 @@
 
       onlyoffice-desktopeditors
       papers
-      vesktop
 
     ];
 }
