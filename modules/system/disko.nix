@@ -1,4 +1,14 @@
 { system, lib, ... }:
+
+let
+  # -- shared btrfs options
+  opts = [ "noatime" "compress=zstd" "discard=async" ];
+
+  sub = mountpoint: {
+    inherit mountpoint;
+    mountOptions = opts;
+  };
+in
 {
   disko.devices.disk.main = {
     type = "disk";
@@ -7,6 +17,7 @@
     content = {
       type = "gpt";
       partitions = {
+        # -- esp
         ESP = {
           label = "EFI";
           type = "EF00";
@@ -15,10 +26,11 @@
             type = "filesystem";
             format = "vfat";
             mountpoint = "/boot";
-            mountOptions = [ "dmask=0077" ];
+            mountOptions = [ "umask=0077" ];
           };
         };
 
+        # -- encryption settings
         root = {
           size = "100%";
           content = {
@@ -33,38 +45,9 @@
               type = "btrfs";
               extraArgs = [ "-f" ];
               subvolumes = {
-                "/root" = {
-                  mountpoint = "/";
-                  mountOptions = [
-                    "noatime"
-                    "compress=zstd"
-                    "discard=async"
-                  ];
-                };
-                "/nix" = {
-                  mountpoint = "/nix";
-                  mountOptions = [
-                    "noatime"
-                    "compress=zstd"
-                    "discard=async"
-                  ];
-                };
-                "/home" = {
-                  mountpoint = "/home";
-                  mountOptions = [
-                    "noatime"
-                    "compress=zstd"
-                    "discard=async"
-                  ];
-                };
-                "/boot" = {
-                  mountpoint = "/boot";
-                  mountOptions = [
-                    "noatime"
-                    "compress=zstd"
-                    "discard=async"
-                  ];
-                };
+                "/root" = sub "/";
+                "/nix" = sub "/nix";
+                "/home" = sub "/home";
               };
             };
           };
