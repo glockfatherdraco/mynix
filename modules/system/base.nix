@@ -57,7 +57,6 @@
         enable = true;
         pcrs = [ 0 4 7 ];
           autoCryptenroll = {
-          enable = true;
           device = config.disko.devices.disk.main.content.partitions.root.device;
         };
       };
