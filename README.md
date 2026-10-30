@@ -11,7 +11,7 @@
 A single user [NixOS](https://nixos.org/) configuration with [COSMIC](https://system76.com/cosmic) desktop and Home Manager
 
 > [!CAUTION]
-> Still a work in progress. I'm learning Nix, so expect ~~retarded~~ questionable decisions
+> Still a work in progress config. I'm learning Nix, so expect ~~retarded~~ questionable decisions
 
 ---
 
@@ -42,26 +42,5 @@ A single user [NixOS](https://nixos.org/) configuration with [COSMIC](https://sy
 <summary><b>Why COSMIC?</b></summary>
 
 > I love [libcosmic](https://github.com/pop-os/libcosmic)
-
-</details>
-
-### Installation (notes for me)
-
-<details>
-<summary><b>Commands</b></summary>
-
-```
-nix-shell -p git --run "sudo git clone https://github.com/glockfatherdraco/nixos-config.git /etc/nixos"
-```
-
-```
-sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode destroy,format,mount --flake /etc/nixos#nix \
-&& sudo nixos-install --flake /etc/nixos#nix --no-channel-copy --no-root-password \
-&& sudo mkdir -p /mnt/etc && sudo cp -r /etc/nixos /mnt/etc/nixos
-```
-
-```
-sudo nixos-enter --root /mnt -c "passwd gfd"
-```
 
 </details>

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, system, user, ... }:
+{ lib, pkgs, system, user, ... }:
 
 {
   # -- nix
@@ -39,10 +39,7 @@
 
     loader = {
       systemd-boot.enable = lib.mkForce false;
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
-      };
+      efi.canTouchEfiVariables = true;
     };
 
     lanzaboote = {
@@ -50,20 +47,15 @@
       pkiBundle = "/var/lib/sbctl";
       configurationLimit = 4;
       autoGenerateKeys.enable = true;
-
       autoEnrollKeys = {
         enable = true;
-        includeMicrosoftKeys = true;
+        includeMicrosoftKeys = false;
         allowBrickingMyMachine = true;
       };
 
       measuredBoot = {
         enable = true;
         pcrs = [ 0 4 7 ];
-        autoCryptenroll = {
-          enable = true;
-          device = config.disko.devices.disk.main.content.partitions.root.device;
-        };
       };
     };
   };
