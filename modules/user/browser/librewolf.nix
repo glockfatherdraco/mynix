@@ -9,7 +9,7 @@ in
 
     # -- my default profile
     profiles.home = {
-      name = "Home";
+      name = "home";
       isDefault = true;
       settings = import (data + "/prefs.nix");
     };
@@ -18,6 +18,7 @@ in
     policies = (import (data + "/settings.nix")) // {
       Bookmarks = import (data + "/bookmarks.nix");
       ExtensionSettings = import (data + "/extensions.nix");
+      SearchEngines = import (data + "/search.nix");
     };
   };
 }

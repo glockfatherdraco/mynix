@@ -19,7 +19,7 @@
     ];
   };
 
-  # waits for network manager to go online
+  # -- waits for networkmanager service to go online
   systemd.services.flatpak-managed-install = {
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];

@@ -8,20 +8,18 @@
       type = "gpt";
       partitions = {
         ESP = {
-          priority = 1;
           label = "EFI";
           type = "EF00";
           size = "1G";
           content = {
             type = "filesystem";
             format = "vfat";
-            mountpoint = "/boot";
-            mountOptions = [ "umask=0077" ];
+            mountpoint = "/boot/efi";
+            mountOptions = [ "dmask=0077" ];
           };
         };
 
         root = {
-          priority = 2;
           size = "100%";
           content = {
             type = "luks";
@@ -32,10 +30,42 @@
               crypttabExtraOpts = [ "tpm2-device=auto" ];
             };
             content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/";
-              mountOptions = [ "noatime" ];
+              type = "btrfs";
+              extraArgs = [ "-f" ];
+              subvolumes = {
+                "/root" = {
+                  mountpoint = "/";
+                  mountOptions = [
+                    "noatime"
+                    "compress=zstd"
+                    "discard=async"
+                  ];
+                };
+                "/nix" = {
+                  mountpoint = "/nix";
+                  mountOptions = [
+                    "noatime"
+                    "compress=zstd"
+                    "discard=async"
+                  ];
+                };
+                "/home" = {
+                  mountpoint = "/home";
+                  mountOptions = [
+                    "noatime"
+                    "compress=zstd"
+                    "discard=async"
+                  ];
+                };
+                "/boot" = {
+                  mountpoint = "/boot";
+                  mountOptions = [
+                    "noatime"
+                    "compress=zstd"
+                    "discard=async"
+                  ];
+                };
+              };
             };
           };
         };

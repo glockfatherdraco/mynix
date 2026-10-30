@@ -39,7 +39,10 @@
 
     loader = {
       systemd-boot.enable = lib.mkForce false;
-      efi.canTouchEfiVariables = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
     };
 
     lanzaboote = {
@@ -114,6 +117,7 @@
         DNSOverTLS = "true";
         DNSSEC = "allow-downgrade";
         Domains = [ "~." ];
+        FallbackDNS = [ ];
         LLMNR = "false";
       };
     };
