@@ -1,4 +1,4 @@
-{ lib, pkgs, system, user, ... }:
+{ config, lib, pkgs, system, user, ... }:
 
 {
   # -- nix
@@ -56,6 +56,10 @@
       measuredBoot = {
         enable = true;
         pcrs = [ 0 4 7 ];
+          autoCryptenroll = {
+          enable = true;
+          device = config.disko.devices.disk.main.content.partitions.root.device;
+        };
       };
     };
   };
